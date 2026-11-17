@@ -44,8 +44,8 @@
       img.src = thumb.currentSrc || thumb.src;
       img.alt = thumb.alt;
       var full = new Image();
-      full.onload = function () { if (shots[i] === a) img.src = a.href; };
-      full.src = a.href;
+      full.onload = function () { if (shots[i] === a) img.src = a.dataset.full; };
+      full.src = a.dataset.full;
       cap.textContent = '';
       if (a.dataset.link) {
         var l = d.createElement('a');
@@ -56,7 +56,7 @@
         cap.textContent = (i + 1) + ' / ' + shots.length;
       }
       var nx = shots[(i + 1) % shots.length];
-      if (nx) new Image().src = nx.href;
+      if (nx) new Image().src = nx.dataset.full;
     };
     shots.forEach(function (a, n) {
       a.addEventListener('click', function (e) {
