@@ -10,7 +10,7 @@
   });
 
   // Mjuk intoning av bilder
-  [].forEach.call(d.querySelectorAll('.shot img, .card-img img'), function (im) {
+  [].forEach.call(d.querySelectorAll('.shot img, .card-img img, .tile-img img'), function (im) {
     var done = function () { im.classList.add('is-loaded'); };
     if (im.complete && im.naturalWidth) done();
     else { im.addEventListener('load', done); im.addEventListener('error', done); }
@@ -31,6 +31,22 @@
     window.addEventListener('hashchange', function () { apply(location.hash.slice(1)); });
     apply(location.hash.slice(1));
   }
+
+  // Film: YouTube laddas först vid klick, utan kakor (youtube-nocookie)
+  [].forEach.call(d.querySelectorAll('.film[data-video]'), function (b) {
+    b.addEventListener('click', function () {
+      var f = d.createElement('iframe');
+      f.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(b.dataset.video) + '?autoplay=1&rel=0';
+      f.title = b.getAttribute('aria-label');
+      f.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+      f.allowFullscreen = true;
+      var box = d.createElement('div');
+      box.className = 'film';
+      box.appendChild(f);
+      b.parentNode.replaceChild(box, b);
+      track('film_play', { video: b.dataset.video });
+    });
+  });
 
   // Lightbox
   var box = d.querySelector('.lightbox');
