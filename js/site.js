@@ -9,6 +9,29 @@
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
 
+  // Mjuk intoning av bilder
+  [].forEach.call(d.querySelectorAll('.shot img, .card-img img'), function (im) {
+    var done = function () { im.classList.add('is-loaded'); };
+    if (im.complete && im.naturalWidth) done();
+    else { im.addEventListener('load', done); im.addEventListener('error', done); }
+  });
+
+  // Filter på projektsidan. Stöder länk direkt till ett filter, t.ex. /projects/#fashion
+  var bar = d.querySelector('.filters');
+  if (bar) {
+    var btns = [].slice.call(bar.querySelectorAll('button')), items = [].slice.call(d.querySelectorAll('.cards li'));
+    var apply = function (key, push) {
+      if (!btns.some(function (b) { return b.dataset.filter === key; })) key = 'all';
+      btns.forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.filter === key ? 'true' : 'false'); });
+      items.forEach(function (li) { li.hidden = key !== 'all' && li.dataset.cat.split(' ').indexOf(key) < 0; });
+      if (push) history.replaceState(null, '', key === 'all' ? location.pathname : '#' + key);
+    };
+    bar.hidden = false;
+    bar.addEventListener('click', function (e) { if (e.target.dataset.filter) apply(e.target.dataset.filter, true); });
+    window.addEventListener('hashchange', function () { apply(location.hash.slice(1)); });
+    apply(location.hash.slice(1));
+  }
+
   // Lightbox
   var box = d.querySelector('.lightbox');
   var shots = [].slice.call(d.querySelectorAll('a[data-lightbox]'));
