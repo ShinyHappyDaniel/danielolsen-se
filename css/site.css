@@ -141,4 +141,13 @@ main{padding-block:var(--s7) var(--s9);min-height:60vh}
 html[data-type="b"]{--serif:"Syne",var(--font);--label:"Geist Mono",ui-monospace,monospace;--dw:600;--dt:-.04em;--dl:1;--track:.06em;
   --fs-h1:clamp(1.9rem,1.2rem + 2.7vw,3.5rem);--fs-pager:1.125rem}
 html[data-type="b"] .intro h1,html[data-type="b"] .page h1{text-transform:lowercase}
+/* Typsnittsförslag C: Big Shoulders Display (fet, kondenserad) + Geist Mono. <html data-type="c"> */
+@font-face{font-family:"Big Shoulders Display";src:url("/danielolsen-se/fonts/big-shoulders-latin-wght.woff2") format("woff2");font-weight:100 900;font-display:swap}
+html[data-type="c"]{--serif:"Big Shoulders Display","Arial Narrow",var(--font);--label:"Geist Mono",ui-monospace,monospace;--dw:800;--dt:0em;--dl:.9;--track:.06em;
+  --fs-h1:clamp(3rem,1.6rem + 6vw,6.5rem);--fs-pager:1.875rem}
+html[data-type="c"] h1,html[data-type="c"] .pager a{text-transform:uppercase}
+html[data-type="c"] .pager span{text-transform:uppercase;font-size:var(--fs-small)}
+html[data-type="c"] .intro{max-width:none}
+html[data-type="c"] .intro h1,html[data-type="c"] .project-head h1,html[data-type="c"] .page h1{margin-bottom:var(--s5)}
+html[data-type="c"] .card-title{font:700 1.375rem/1.1 var(--serif);letter-spacing:.01em}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}

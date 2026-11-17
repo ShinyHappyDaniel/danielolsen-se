@@ -1,15 +1,15 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="robots" content="noindex,nofollow">
-<script>try{var v=new URLSearchParams(location.search).get('typ')||localStorage.getItem('do-typ');if(v==='b')document.documentElement.dataset.type='b'}catch(e){}</script>
+<script>try{var v=new URLSearchParams(location.search).get('typ')||localStorage.getItem('do-typ');if(v==='b'||v==='c')document.documentElement.dataset.type=v}catch(e){}</script>
 <title>Moved</title>
 <link rel="canonical" href="https://www.danielolsen.se/projects/konstvarlden/">
 <meta name="robots" content="noindex">
 <meta http-equiv="refresh" content="0; url=/danielolsen-se/projects/konstvarlden/">
 <script>location.replace("/danielolsen-se/projects/konstvarlden/");</script>
 </head><body><p>This page has moved to <a href="/danielolsen-se/projects/konstvarlden/">https://www.danielolsen.se/projects/konstvarlden/</a>.</p><div id="typ" style="position:fixed;left:12px;bottom:12px;z-index:40;display:flex;gap:1px;font:500 11px/1 system-ui,sans-serif;letter-spacing:.08em">
-<button data-v="a">TYPSNITT A</button><button data-v="b">TYPSNITT B</button></div>
+<button data-v="a">TYPSNITT A</button><button data-v="b">TYPSNITT B</button><button data-v="c">TYPSNITT C</button></div>
 <style>#typ button{background:#2a2b2d;color:#ecebe7;border:0;padding:9px 12px;cursor:pointer}#typ button[aria-pressed=true]{background:#ecebe7;color:#151617}</style>
 <script>(function(){var r=document.documentElement,b=document.querySelectorAll('#typ button');function s(){b.forEach(function(x){x.setAttribute('aria-pressed',(r.dataset.type||'a')===x.dataset.v)})}
-b.forEach(function(x){x.onclick=function(){if(x.dataset.v==='b')r.dataset.type='b';else delete r.dataset.type;try{localStorage.setItem('do-typ',x.dataset.v)}catch(e){}s()}});s()})();</script>
+b.forEach(function(x){x.onclick=function(){if(x.dataset.v==='a')delete r.dataset.type;else r.dataset.type=x.dataset.v;try{localStorage.setItem('do-typ',x.dataset.v)}catch(e){}s()}});s()})();</script>
 </body></html>
