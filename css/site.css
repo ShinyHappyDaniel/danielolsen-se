@@ -1,14 +1,14 @@
 @font-face{font-family:"Big Shoulders Display";src:url("/danielolsen-se/fonts/big-shoulders-latin-wght.woff2") format("woff2");font-weight:100 900;font-display:swap}
 @font-face{font-family:"Geist Mono";src:url("/danielolsen-se/fonts/geist-mono-latin-wght.woff2") format("woff2");font-weight:100 900;font-display:swap}
-@font-face{font-family:"Geist";src:url("/danielolsen-se/fonts/geist-latin-wght.woff2") format("woff2");font-weight:100 900;font-display:swap}
+@font-face{font-family:"Instrument Sans";src:url("/danielolsen-se/fonts/instrument-sans-latin-wght.woff2") format("woff2");font-weight:400 700;font-display:swap}
 :root{
   color-scheme:dark;
   --bg:#2e2e2e;--ink:#f1f0ec;--muted:#bdbcb7;--line:#474747;--line-strong:#858585;--tile:#383838;--veil:rgba(36,36,36,.98);
-  --font:"Geist",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+  --font:"Instrument Sans",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
   --display:"Big Shoulders Display","Arial Narrow",var(--font);
   --gutter:clamp(16px,4vw,56px);--gap:clamp(8px,1.4vw,20px);
   --s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:32px;--s7:48px;--s8:64px;--s9:96px;
-  --fs-small:.75rem;--fs-body:.9375rem;--fs-h2:1rem;--fs-h1:clamp(3rem,1.6rem + 6vw,6.5rem);--fs-pager:1.875rem;
+  --fs-small:.75rem;--fs-body:1rem;--fs-h2:1rem;--fs-h1:clamp(3rem,1.6rem + 6vw,6.5rem);--fs-pager:1.875rem;
   --track:.06em;--max:1600px;
   --label:"Geist Mono",ui-monospace,monospace;--dw:800;--dt:0em;--dl:1.06;
 }
@@ -139,14 +139,4 @@ h1,.pager a{text-transform:uppercase}
 .intro{max-width:none}
 .intro h1,.project-head h1,.page h1{margin-bottom:var(--s5)}
 .card-title{font:700 1.375rem/1.1 var(--display);letter-spacing:.01em}
-/* Brödtextförslag. Slås på med <html data-body="1|2|3"> */
-@font-face{font-family:"Instrument Sans";src:url("/danielolsen-se/fonts/instrument-sans-latin-wght.woff2") format("woff2");font-weight:400 700;font-display:swap}
-@font-face{font-family:"Newsreader";src:url("/danielolsen-se/fonts/newsreader-latin-wght.woff2") format("woff2");font-weight:200 800;font-display:swap}
-html[data-body="1"]{--font:"Instrument Sans",system-ui,sans-serif;--fs-body:1rem}
-html[data-body="2"]{--font:"Newsreader","Iowan Old Style",Georgia,serif;--fs-body:1.125rem}
-html[data-body="2"] .intro .prose{font-size:1.25rem}
-html[data-body="2"] body{line-height:1.55}
-html[data-body="3"]{--font:"Geist Mono",ui-monospace,monospace;--fs-body:.875rem}
-html[data-body="3"] .intro .prose{font-size:.9375rem}
-html[data-body="3"] body{line-height:1.75;letter-spacing:-.01em}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
