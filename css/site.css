@@ -10,7 +10,7 @@
   --s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:32px;--s7:48px;--s8:64px;--s9:96px;
   --fs-small:.75rem;--fs-body:.9375rem;--fs-h2:1rem;--fs-h1:clamp(3rem,1.6rem + 6vw,6.5rem);--fs-pager:1.875rem;
   --track:.06em;--max:1600px;
-  --label:"Geist Mono",ui-monospace,monospace;--dw:800;--dt:0em;--dl:.9;
+  --label:"Geist Mono",ui-monospace,monospace;--dw:800;--dt:0em;--dl:1.06;
 }
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
