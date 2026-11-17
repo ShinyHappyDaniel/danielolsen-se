@@ -139,4 +139,14 @@ h1,.pager a{text-transform:uppercase}
 .intro{max-width:none}
 .intro h1,.project-head h1,.page h1{margin-bottom:var(--s5)}
 .card-title{font:700 1.375rem/1.1 var(--display);letter-spacing:.01em}
+/* Brödtextförslag. Slås på med <html data-body="1|2|3"> */
+@font-face{font-family:"Instrument Sans";src:url("/danielolsen-se/fonts/instrument-sans-latin-wght.woff2") format("woff2");font-weight:400 700;font-display:swap}
+@font-face{font-family:"Newsreader";src:url("/danielolsen-se/fonts/newsreader-latin-wght.woff2") format("woff2");font-weight:200 800;font-display:swap}
+html[data-body="1"]{--font:"Instrument Sans",system-ui,sans-serif;--fs-body:1rem}
+html[data-body="2"]{--font:"Newsreader","Iowan Old Style",Georgia,serif;--fs-body:1.125rem}
+html[data-body="2"] .intro .prose{font-size:1.25rem}
+html[data-body="2"] body{line-height:1.55}
+html[data-body="3"]{--font:"Geist Mono",ui-monospace,monospace;--fs-body:.875rem}
+html[data-body="3"] .intro .prose{font-size:.9375rem}
+html[data-body="3"] body{line-height:1.75;letter-spacing:-.01em}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
