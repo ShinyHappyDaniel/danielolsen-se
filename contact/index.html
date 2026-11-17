@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="robots" content="noindex,nofollow">
+<script>try{var v=new URLSearchParams(location.search).get('typ')||localStorage.getItem('do-typ');if(v==='b')document.documentElement.dataset.type='b'}catch(e){}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Contact | Daniel Olsén Photographer, Stockholm</title>
 <meta name="description" content="Contact photographer Daniel Olsén in Stockholm for enquiries, collaborations, commissions, availability and press. Email or call +46 709 56 95 94."><link rel="canonical" href="https://www.danielolsen.se/contact/">
@@ -20,12 +21,12 @@
 <link rel="icon" href="/danielolsen-se/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="/danielolsen-se/fonts/geist-latin-wght.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/danielolsen-se/fonts/instrument-serif-latin-400.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/danielolsen-se/css/site.css?v=2">
+<link rel="stylesheet" href="/danielolsen-se/css/site.css?v=3">
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Person", "@id": "https://www.danielolsen.se/#daniel", "name": "Daniel Olsén", "url": "https://www.danielolsen.se/", "jobTitle": "Photographer and videographer", "email": "daniel@danielolsen.se", "telephone": "+46709569594", "address": {"@type": "PostalAddress", "addressLocality": "Stockholm", "addressCountry": "SE"}, "sameAs": ["https://www.instagram.com/photographer_danielolsen"], "knowsAbout": ["Fashion photography", "Commercial photography", "Advertising photography", "Campaign photography", "Editorial photography", "Automotive photography", "Product photography", "Videography", "Retouching"]}, {"@type": "ProfessionalService", "@id": "https://www.danielolsen.se/#business", "name": "Daniel Olsén Photographer", "url": "https://www.danielolsen.se/", "email": "daniel@danielolsen.se", "telephone": "+46709569594", "founder": {"@id": "https://www.danielolsen.se/#daniel"}, "address": {"@type": "PostalAddress", "addressLocality": "Stockholm", "addressCountry": "SE"}, "areaServed": ["Stockholm", "Sweden", "Europe", "Worldwide"], "description": "Fashion and commercial photography and film for brands, agencies and magazines."}]}</script></head>
 <body data-ga="G-5F848KPP0C">
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
-  <a class="wordmark" href="/danielolsen-se/"><b>Daniel Olsén</b> <span>Photographer</span></a>
+  <a class="wordmark" href="/danielolsen-se/"><img src="/danielolsen-se/logo/photographer-daniel-olsen-light.png" width="1199" height="63" alt="Photographer Daniel Olsén"></a>
   <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
   <nav id="nav" class="site-nav" aria-label="Menu">
     <ul>
@@ -77,6 +78,11 @@
   <button type="button" data-consent="yes">Accept</button>
   <button type="button" data-consent="no">Decline</button>
 </div>
-<script src="/danielolsen-se/js/site.js?v=2" defer></script>
+<script src="/danielolsen-se/js/site.js?v=3" defer></script>
+<div id="typ" style="position:fixed;left:12px;bottom:12px;z-index:40;display:flex;gap:1px;font:500 11px/1 system-ui,sans-serif;letter-spacing:.08em">
+<button data-v="a">TYPSNITT A</button><button data-v="b">TYPSNITT B</button></div>
+<style>#typ button{background:#2a2b2d;color:#ecebe7;border:0;padding:9px 12px;cursor:pointer}#typ button[aria-pressed=true]{background:#ecebe7;color:#151617}</style>
+<script>(function(){var r=document.documentElement,b=document.querySelectorAll('#typ button');function s(){b.forEach(function(x){x.setAttribute('aria-pressed',(r.dataset.type||'a')===x.dataset.v)})}
+b.forEach(function(x){x.onclick=function(){if(x.dataset.v==='b')r.dataset.type='b';else delete r.dataset.type;try{localStorage.setItem('do-typ',x.dataset.v)}catch(e){}s()}});s()})();</script>
 </body>
 </html>
