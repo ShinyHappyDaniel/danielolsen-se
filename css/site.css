@@ -1,16 +1,16 @@
+@font-face{font-family:"Big Shoulders Display";src:url("/danielolsen-se/fonts/big-shoulders-latin-wght.woff2") format("woff2");font-weight:100 900;font-display:swap}
+@font-face{font-family:"Geist Mono";src:url("/danielolsen-se/fonts/geist-mono-latin-wght.woff2") format("woff2");font-weight:100 900;font-display:swap}
 @font-face{font-family:"Geist";src:url("/danielolsen-se/fonts/geist-latin-wght.woff2") format("woff2");font-weight:100 900;font-display:swap}
-@font-face{font-family:"Instrument Serif";src:url("/danielolsen-se/fonts/instrument-serif-latin-400.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
-@font-face{font-family:"Instrument Serif";src:url("/danielolsen-se/fonts/instrument-serif-latin-400-italic.woff2") format("woff2");font-weight:400;font-style:italic;font-display:swap}
 :root{
   color-scheme:dark;
-  --bg:#151617;--ink:#ecebe7;--muted:#9c9b96;--line:#303133;--line-strong:#6f7072;--tile:#1e1f21;--veil:rgba(17,18,19,.98);
+  --bg:#434343;--ink:#f1f0ec;--muted:#c6c5c0;--line:#5c5c5c;--line-strong:#929292;--tile:#4e4e4e;--veil:rgba(52,52,52,.98);
   --font:"Geist",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
-  --serif:"Instrument Serif","Iowan Old Style","Times New Roman",serif;
+  --display:"Big Shoulders Display","Arial Narrow",var(--font);
   --gutter:clamp(16px,4vw,56px);--gap:clamp(8px,1.4vw,20px);
   --s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:32px;--s7:48px;--s8:64px;--s9:96px;
-  --fs-small:.75rem;--fs-body:.9375rem;--fs-h2:1rem;--fs-h1:clamp(2.25rem,1.5rem + 3vw,4rem);
-  --track:.14em;--max:1600px;
-  --label:var(--font);--dw:400;--dt:-.015em;--dl:1.02;
+  --fs-small:.75rem;--fs-body:.9375rem;--fs-h2:1rem;--fs-h1:clamp(3rem,1.6rem + 6vw,6.5rem);--fs-pager:1.875rem;
+  --track:.06em;--max:1600px;
+  --label:"Geist Mono",ui-monospace,monospace;--dw:800;--dt:0em;--dl:.9;
 }
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
@@ -21,8 +21,7 @@ a:hover{text-decoration-thickness:1px}
 :focus-visible{outline:11px solid var(--ink);outline-offset:3px}
 [hidden]{display:none!important}
 h1,h2{font-weight:400;line-height:1.2;margin:0}
-h1{font-family:var(--serif);font-size:var(--fs-h1);font-weight:var(--dw);line-height:var(--dl);letter-spacing:var(--dt);text-wrap:balance}
-h1 em{font-style:italic}
+h1{font-family:var(--display);font-size:var(--fs-h1);font-weight:var(--dw);line-height:var(--dl);letter-spacing:var(--dt);text-wrap:balance}
 h2{font-size:var(--fs-small);text-transform:uppercase;letter-spacing:var(--track);color:var(--muted);margin-top:var(--s7);margin-bottom:var(--s3)}
 .skip{position:absolute;left:-999px;top:0;background:var(--ink);color:var(--bg);padding:var(--s2) var(--s4);z-index:20}
 .skip:focus{left:0}
@@ -79,7 +78,7 @@ main{padding-block:var(--s7) var(--s9);min-height:60vh}
 .card-img{display:block;aspect-ratio:4/5;overflow:hidden;background:var(--tile)}
 .card-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease,opacity .25s ease}
 .cards a:hover img{transform:scale(1.02);opacity:.9}
-.card-title{display:block;margin-top:var(--s3);font-size:var(--fs-small);letter-spacing:var(--track);text-transform:uppercase}
+.card-title{display:block;margin-top:var(--s3);text-transform:uppercase}
 .selected{margin-top:var(--s8)}
 .selected h2{margin-bottom:var(--s5)}
 
@@ -99,7 +98,7 @@ main{padding-block:var(--s7) var(--s9);min-height:60vh}
 .pager{display:flex;justify-content:space-between;gap:var(--s5);margin-top:var(--s8);padding-top:var(--s4);border-top:1px solid var(--line-strong)}
 .pager a{text-decoration:none}
 .pager a:last-child{text-align:right}
-.pager a{font:var(--dw) var(--fs-pager,1.5rem)/1.2 var(--serif);letter-spacing:var(--dt)}
+.pager a{font:var(--dw) var(--fs-pager,1.5rem)/1.2 var(--display);letter-spacing:var(--dt)}
 .pager span{display:block;letter-spacing:var(--track);font-weight:400;margin-bottom:var(--s1);font-size:var(--fs-small);letter-spacing:var(--track);text-transform:uppercase;color:var(--muted)}
 
 .form{display:flex;flex-direction:column;gap:var(--s5);max-width:34rem;margin-top:var(--s7)}
@@ -133,21 +132,11 @@ main{padding-block:var(--s7) var(--s9);min-height:60vh}
 
 .consent{position:fixed;left:var(--s4);right:var(--s4);bottom:var(--s4);max-width:26rem;margin-left:auto;background:var(--tile);border:1px solid var(--line-strong);padding:var(--s5);z-index:30;display:flex;flex-wrap:wrap;gap:var(--s3);font-size:.8125rem}
 .consent p{margin:0;flex-basis:100%}
-.site-nav a,.nav-toggle,h2,.card-title,.back,.facts dt,.pager span,.credits summary,.lightbox figcaption,.form button,.consent button{font-family:var(--label)}
+.site-nav a,.nav-toggle,h2,.back,.facts dt,.pager span,.credits summary,.lightbox figcaption,.form button,.consent button{font-family:var(--label)}
 
-/* Typsnittsförslag B: Syne + Geist Mono. Slås på med <html data-type="b"> */
-@font-face{font-family:"Syne";src:url("/danielolsen-se/fonts/syne-latin-wght.woff2") format("woff2");font-weight:400 800;font-display:swap}
-@font-face{font-family:"Geist Mono";src:url("/danielolsen-se/fonts/geist-mono-latin-wght.woff2") format("woff2");font-weight:100 900;font-display:swap}
-html[data-type="b"]{--serif:"Syne",var(--font);--label:"Geist Mono",ui-monospace,monospace;--dw:600;--dt:-.04em;--dl:1;--track:.06em;
-  --fs-h1:clamp(1.9rem,1.2rem + 2.7vw,3.5rem);--fs-pager:1.125rem}
-html[data-type="b"] .intro h1,html[data-type="b"] .page h1{text-transform:lowercase}
-/* Typsnittsförslag C: Big Shoulders Display (fet, kondenserad) + Geist Mono. <html data-type="c"> */
-@font-face{font-family:"Big Shoulders Display";src:url("/danielolsen-se/fonts/big-shoulders-latin-wght.woff2") format("woff2");font-weight:100 900;font-display:swap}
-html[data-type="c"]{--serif:"Big Shoulders Display","Arial Narrow",var(--font);--label:"Geist Mono",ui-monospace,monospace;--dw:800;--dt:0em;--dl:.9;--track:.06em;
-  --fs-h1:clamp(3rem,1.6rem + 6vw,6.5rem);--fs-pager:1.875rem}
-html[data-type="c"] h1,html[data-type="c"] .pager a{text-transform:uppercase}
-html[data-type="c"] .pager span{text-transform:uppercase;font-size:var(--fs-small)}
-html[data-type="c"] .intro{max-width:none}
-html[data-type="c"] .intro h1,html[data-type="c"] .project-head h1,html[data-type="c"] .page h1{margin-bottom:var(--s5)}
-html[data-type="c"] .card-title{font:700 1.375rem/1.1 var(--serif);letter-spacing:.01em}
+h1,.pager a{text-transform:uppercase}
+.pager span{font-size:var(--fs-small)}
+.intro{max-width:none}
+.intro h1,.project-head h1,.page h1{margin-bottom:var(--s5)}
+.card-title{font:700 1.375rem/1.1 var(--display);letter-spacing:.01em}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
