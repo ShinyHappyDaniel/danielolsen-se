@@ -191,3 +191,4 @@ h1,.pager a{text-transform:uppercase}
 .js .tile-img img{opacity:0}
 .js .tile-img img.is-loaded{opacity:1}
 .tile-img{position:relative}
+.prose h3{font:inherit;font-weight:600;margin:0}
