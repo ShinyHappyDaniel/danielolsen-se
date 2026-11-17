@@ -3,7 +3,7 @@
 @font-face{font-family:"Geist";src:url("/danielolsen-se/fonts/geist-latin-wght.woff2") format("woff2");font-weight:100 900;font-display:swap}
 :root{
   color-scheme:dark;
-  --bg:#434343;--ink:#f1f0ec;--muted:#c6c5c0;--line:#5c5c5c;--line-strong:#929292;--tile:#4e4e4e;--veil:rgba(52,52,52,.98);
+  --bg:#2e2e2e;--ink:#f1f0ec;--muted:#bdbcb7;--line:#474747;--line-strong:#858585;--tile:#383838;--veil:rgba(36,36,36,.98);
   --font:"Geist",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
   --display:"Big Shoulders Display","Arial Narrow",var(--font);
   --gutter:clamp(16px,4vw,56px);--gap:clamp(8px,1.4vw,20px);
