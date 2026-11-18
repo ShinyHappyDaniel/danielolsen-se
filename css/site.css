@@ -202,3 +202,4 @@ h1,.pager a{text-transform:uppercase}
 @media (min-width:900px){.about{grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:var(--s8);align-items:start}.about figure{order:2;max-width:none}}
 .js .filters[hidden]{display:flex!important}
 .masonry .shot.wide{display:block;column-span:all}
+.masonry.even .shot:not(.wide) img{display:block;aspect-ratio:var(--ratio);height:auto;object-fit:cover}
