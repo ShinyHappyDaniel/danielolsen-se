@@ -192,3 +192,7 @@ h1,.pager a{text-transform:uppercase}
 .js .tile-img img.is-loaded{opacity:1}
 .tile-img{position:relative}
 .prose h3{font:inherit;font-weight:600;margin:0}
+.about{display:grid;gap:var(--s6)}
+.about figure{margin:0;background:var(--tile);max-width:28rem}
+.about img{display:block;width:100%;height:auto}
+@media (min-width:900px){.about{grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:var(--s8);align-items:start}.about figure{order:2;max-width:none}}
