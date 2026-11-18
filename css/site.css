@@ -203,3 +203,7 @@ h1,.pager a{text-transform:uppercase}
 .js .filters[hidden]{display:flex!important}
 .masonry .shot.wide{display:block;column-span:all}
 .masonry.even .shot:not(.wide) img{display:block;aspect-ratio:var(--ratio);height:auto;object-fit:cover}
+.masonry.mat{--mat:clamp(8px,1vw,14px)}
+.masonry.mat .shot{background:#f4f3ef;padding:var(--mat)}
+.masonry.mat .shot img{display:block}
+.masonry.mat .shot-cap{left:var(--mat);bottom:var(--mat)}
