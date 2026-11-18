@@ -203,3 +203,5 @@ h1,.pager a{text-transform:uppercase}
 .js .filters[hidden]{display:flex!important}
 .masonry .shot.wide{display:block;column-span:all}
 .masonry.even .shot:not(.wide) img{display:block;aspect-ratio:var(--ratio);height:auto;object-fit:cover}
+.contact-grid figure{order:2}
+@media (max-width:899px){.contact-grid figure{margin-top:var(--s6)}}
